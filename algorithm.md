@@ -38,25 +38,19 @@
 - Return: costs of each room and total cost of flooring
 
 room_count = 0
-while room_count does not equal 5: 
-call length function
-call width function
-call area function
-call floor_type function 
-call room_cost function
-call total_room_cost
+1. while room_count does not equal 5: 
+2. call length function
+3. call width function
+4. call area function
+5. call floor_type function 
+6. call room_cost function
+7. call total_room_cost
 
 Output floor options to the user
-3) Make each room their own variable
-4) Make variables for carpet, hardwood, and tile
-5) name in feet 
-5) call 'area' function
-5) Reprompt user to enter a float if anything other than a float is entered
-6) Prompt user for flooring type for each room 
-7) Remove spaces and change flooring type to lower case
-8) Reprompt user to enter a choice from step one if not inputted 
-9) call room_cost function 
-10) Output cost of each room
+set total cost equal to zero 
+10) call main function 
+11) 
 11) Output total cost of rooms combined by adding cost of each room together
 12) Output 'Thank you!'
+13) [IMG_6898.HEIC](../../Downloads/IMG_6898.HEIC)
 
