@@ -1,4 +1,18 @@
-# your codeprint("Hi friend, how are you? Need help calculating your house costs?")
+# Programmers: Theresa and Jose
+# Course:  CS151, Dr. Zelalem Jembre Yalew
+# Due Date: 9/16/2024
+# Lab Assignment: 7
+# Problem Statement: Our friend just bought a new house, but all of the rooms have carpet or laminate that is horribly
+# dirty and gross.
+#You need to design, write, and test a program that calculates the cost of buying flooring for your friend’s house.
+# Your friend may need to test the cost with different designs, so your program should ask your friend if they want to check the cost of another design.
+# Data In: Length and width of flooring in each room, and type of flooring being installed
+# Data Out:  Total balance of all the rooms combined
+# Credits: In Class
+
+# print("Hi friend, how are you? Need help calculating your house costs?")
+print('Hi friend, how are you? Need help calculating your house costs?')
+print('Your floor options are hardwood at $1.39 per square foot, carpet at $3.99 per square foot, or tile at $4.99 per square foot. ')
 
 # Initial total cost to zero
 total_cost = 0
@@ -15,20 +29,27 @@ def floor_type():
 
 # Function to get length of the room
 def length():
-    while True:
-        room_length = input("Enter the length of the room in feet: ")
-        if room_length.replace('.', '', 1).isdigit() and float(room_length) > 0:
-            return float(room_length)
+    room_length = input("Enter the length of the room in feet: ")
+
+    # while not room_length:
+    #room_length = input("Enter the length of the room in feet: ")
+    #if room_length.replace('.', '', 1).isdigit() and float(room_length) > 0:
+    # return float(room_length)
+    #print("Invalid input. Please enter a positive numeric value.")
+    while not (room_length.replace('.', '', 1).isdigit() and float(room_length) > 0):
         print("Invalid input. Please enter a positive numeric value.")
+        room_length = input("Enter the length of the room in feet: ")
+    return float(room_length)
 
 
 # Function to get width of the room
 def width():
-    while True:
-        room_width = input("Enter the width of the room in feet: ")
-        if room_width.replace('.', '', 1).isdigit() and float(room_width) > 0:
-            return float(room_width)
+    room_width: str = input("Enter the width of the room in feet: ")
+
+    while not room_width.replace('.', '', 1).isdigit() and float(room_width) > 0:
         print("Invalid input. Please enter a positive numeric value.")
+        room_width = input("Enter the width of the room in feet: ")
+    return float(room_width)
 
 
 # Function to calculate area of the room
